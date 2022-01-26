@@ -21,7 +21,8 @@ def parse(filename: str) -> List[List[int]]:
 
     return list(map(int, lines))
 
-def p1(changes: List[int], p2=False):
+
+def p1(changes):
     freq = 0
 
     for change in changes:
@@ -29,7 +30,7 @@ def p1(changes: List[int], p2=False):
     return freq
 
 
-def p2(changes: List[int], freq=0, history=None):
+def p2(changes, freq=0, history=None):
     if not history:
         history = {freq}
 
